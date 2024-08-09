@@ -1,0 +1,526 @@
+/* CSS */
+
+/* Estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f5f5dc;
+    font-family: 'Libre Baskerville', serif;
+    color: #333;
+    overflow-x: hidden;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Barra de navegação */
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #f5f5dc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.navBar .logo h1 {
+    font-size: 28px;
+    color: #8b4513;
+    transition: color 0.3s;
+}
+
+.navBar .navList {
+    display: flex;
+    list-style: none;
+    flex: 2;
+    justify-content: center;
+}
+
+.navBar .navList li {
+    margin-left: 25px;
+}
+
+.navBar .navList li a {
+    text-decoration: none;
+    color: #8b4513;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navBar .navList li a:hover {
+    color: #d2691e;
+}
+
+/* Seção Home */
+.homeSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 10% 0;
+    background-color: #f5f5dc;
+    height: 100vh;
+    transition: background-color 0.3s;
+}
+
+.homeSection .banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.homeSection .image img {
+    width: 550px;
+     height: auto;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    animation: moveImage 5s infinite alternate;
+}
+
+.homeSection .info {
+    max-width: 600px;
+    margin-right: 50px;
+}
+
+.homeSection .info h1 {
+    font-size: 42px;
+    color: #8b4513;
+    margin-bottom: 10px;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.homeSection .info h2 {
+    font-size: 24px;
+    color: #d2691e;
+    margin-bottom: 20px;
+    animation: fadeIn 4s ease-in-out;
+}
+
+.homeSection .info p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    animation: fadeIn 5s ease-in-out;
+}
+
+.homeSection .socialMedia a {
+    text-decoration: none;
+    color: #8b4513;
+    font-size: 24px;
+    margin-right: 20px;
+    transition: color 0.3s;
+}
+
+.homeSection .socialMedia a:hover {
+    color: #d2691e;
+}
+
+/* Animações */
+@keyframes moveImage {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Seção Sobre */
+.aboutSection {
+    padding: 100px 10%;
+    background-color: #f5f5dc;
+    transition: background-color 0.3s;
+}
+
+.aboutSection .aboutContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.aboutSection .aboutText h2 {
+    font-size: 36px;
+    color: #8b4513;
+    margin-bottom: 20px;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.aboutSection .aboutText p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+    animation: fadeIn 4s ease-in-out;
+}
+
+.aboutSection .aboutImage img {
+    width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    animation: moveImage 5s infinite alternate;
+}
+
+/* Seção Ensinamentos */
+.teachingsSection {
+    padding: 100px 10%;
+    background-color: #f5f5dc;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.teachingsSection h2 {
+    font-size: 36px;
+    color: #8b4513;
+    margin-bottom: 50px;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.teachingsSection .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.teachingsSection .teachingItem {
+    max-width: 300px;
+    text-align: center;
+    animation: fadeIn 4s ease-in-out;
+}
+
+.teachingsSection .teachingItem img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.teachingsSection .teachingItem h3 {
+    font-size: 24px;
+    color: #d2691e;
+    margin-bottom: 10px;
+}
+
+.teachingsSection .teachingItem p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Seção Meditação */
+.meditationSection {
+    padding: 100px 10%;
+    background-color: #f5f5dc;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.meditationSection h2 {
+    font-size: 36px;
+    color: #8b4513;
+    margin-bottom: 50px;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.meditationSection .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.meditationSection .meditationContent {
+    max-width: 600px;
+    margin-right: 50px;
+    animation: fadeIn 4s ease-in-out;
+}
+
+.meditationSection .meditationContent p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.meditationSection .meditationContent img {
+    width: 300px;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    animation: moveImage 5s infinite alternate;
+}
+
+/* Seção Contato */
+.contactSection {
+    padding: 100px 10%;
+    background-color: #f5f5dc;
+    transition: background-color 0.3s;
+}
+
+.contactSection h2 {
+    font-size: 36px;
+    color: #8b4513;
+    margin-bottom: 50px;
+    text-align: center;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.contactSection .formGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    animation: fadeIn 4s ease-in-out;
+}
+
+.contactSection .formGroup label {
+    font-size: 18px;
+    color: #8b4513;
+    margin-bottom: 10px;
+}
+
+.contactSection .formGroup input,
+.contactSection .formGroup textarea {
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+.contactSection button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: #8b4513;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contactSection button:hover {
+    background-color: #d2691e;
+}
+
+/* Rodapé */
+footer {
+    padding: 30px 10%;
+    background-color: #f5f5dc;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+footer .socialMedia a {
+    text-decoration: none;
+    color: #8b4513;
+    font-size: 24px;
+    margin-right: 20px;
+    transition: color 0.3s;
+}
+
+footer .socialMedia a:hover {
+    color: #d2691e;
+}
+
+footer p {
+    color: #666;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+/* Tema escuro */
+body.dark-theme {
+    background-color: #333;
+    color: #f5f5dc;
+}
+
+body.dark-theme .navBar {
+    background-color: #333;
+}
+
+body.dark-theme .navBar .logo h1 {
+    color: #f5f5dc;
+}
+
+body.dark-theme .navBar .navList li a {
+    color: #f5f5dc;
+}
+
+body.dark-theme .navBar .navList li a:hover {
+    color: #a9a9a9;
+}
+
+body.dark-theme .homeSection {
+    background-color: #333;
+}
+
+body.dark-theme .homeSection .info h1 {
+    color: #f5f5dc;
+}
+
+body.dark-theme .homeSection .info h2 {
+    color: #a9a9a9;
+}
+
+body.dark-theme .aboutSection,
+body.dark-theme .teachingsSection,
+body.dark-theme .meditationSection,
+body.dark-theme .contactSection {
+    background-color: #333;
+}
+
+body.dark-theme .aboutSection .aboutText h2,
+body.dark-theme .teachingsSection h2,
+body.dark-theme .meditationSection h2,
+body.dark-theme .contactSection h2 {
+    color: #f5f5dc;
+}
+
+body.dark-theme footer {
+    background-color: #333;
+}
+
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .navBar {
+        padding: 20px 5%;
+    }
+
+    .homeSection {
+        padding: 80px 5% 0;
+    }
+
+    .aboutSection {
+        padding: 80px 5%;
+    }
+
+    .teachingsSection {
+        padding: 80px 5%;
+    }
+
+    .meditationSection {
+        padding: 80px 5%;
+    }
+
+    .contactSection {
+        padding: 80px 5%;
+    }
+
+    footer {
+        padding: 20px 5%;
+    }
+}
+
+@media (max-width: 992px) {
+    .homeSection {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .homeSection .info {
+        margin: 0;
+    }
+
+    .aboutSection .aboutContent {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .aboutSection .aboutImage {
+        margin-bottom: 30px;
+    }
+
+    .teachingsSection .container {
+        flex-direction: column;
+    }
+
+    .meditationSection .container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .navBar .logo h1 {
+        font-size: 24px;
+    }
+
+    .navBar .navList {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navBar .navList li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .homeSection .banner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .homeSection .image img {
+        width: 80%;
+    }
+
+    .aboutSection .aboutImage img {
+        width: 80%;
+    }
+
+    .teachingsSection .teachingItem {
+        max-width: 100%;
+    }
+
+    .meditationSection .meditationContent img {
+        width: 70%;
+    }
+}
+
+@media (max-width: 576px) {
+    .navBar {
+        padding: 20px;
+    }
+
+    .navBar .logo h1 {
+        font-size: 20px;
+    }
+
+    .homeSection .info h1 {
+        font-size: 36px;
+    }
+
+    .homeSection .info h2 {
+        font-size: 20px;
+    }
+
+    .homeSection .info p {
+        font-size: 16px;
+    }
+
+    .aboutSection .aboutText h2 {
+        font-size: 28px;
+    }
+
+    .aboutSection .aboutText p {
+        font-size: 16px;
+    }
+
+    .contactSection button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}

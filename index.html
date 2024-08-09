@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal do Budismo</title>
+
+    <!-- Link para a folha de estilo personalizada -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="homeSection active" id="home">
+        <div class="navBar">
+            <div class="logo">
+                <h1>Portal do Budismo</h1>
+            </div>
+            <ul class="navList">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#teachings">Ensinamentos</a></li>
+                <li><a href="#meditation">Meditação</a></li>
+                <li><a href="#contact">Contato</a></li>
+                <li class="theme-switcher">
+                    <label for="theme-toggle" class="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+        <div class="banner">
+            <div class="image">
+                <img src="buddha.png" alt="Buda">
+            </div>
+            <div class="info">
+                <h1>Bem-vindo ao <span style="color: #A52A2A;">Portal do Budismo</span></h1>
+                <h2>Explore a Sabedoria Ancestral</h2>
+                <p>Descubra os ensinamentos do Buda, práticas de meditação e a sabedoria milenar que guia o caminho para a paz interior e a iluminação.</p>
+                <div class="socialMedia">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seção Sobre -->
+    <div class="aboutSection" id="about">
+        <div class="aboutContent">
+            <div class="aboutText">
+                <h2>Sobre o Budismo</h2>
+                <p>O Budismo é uma filosofia e religião que surgiu há mais de 2.500 anos na Índia. Baseado nos ensinamentos de Siddhartha Gautama, o Buda, promove o caminho para a cessação do sofrimento através da compreensão correta, conduta ética e meditação.</p>
+            </div>
+            <div class="aboutImage">
+                <img src="temple.png" alt="Templo Budista">
+            </div>
+        </div>
+    </div>
+
+    <!-- Seção Ensinamentos -->
+    <div class="teachingsSection" id="teachings">
+        <div class="container">
+            <h2>Ensinamentos do Buda</h2>
+            <div class="teachingItem">
+                <img src="teaching1.png" alt="Nobre Verdade 1">
+                <h3>As Quatro Nobres Verdades</h3>
+                <p>O cerne dos ensinamentos budistas, explicando a natureza do sofrimento e o caminho para a libertação.</p>
+            </div>
+            <div class="teachingItem">
+                <img src="teaching2.png" alt="Caminho Óctuplo">
+                <h3>O Nobre Caminho Óctuplo</h3>
+                <p>O caminho prático para a superação do sofrimento, levando à paz e iluminação.</p>
+            </div>
+            <div class="teachingItem">
+                <img src="teaching3.png" alt="Meditação">
+                <h3>A Prática da Meditação</h3>
+                <p>Meditação como ferramenta para desenvolver a concentração, insight e sabedoria.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seção Meditação -->
+    <div class="meditationSection" id="meditation">
+        <div class="container">
+            <h2>Meditação</h2>
+            <div class="meditationContent">
+                <p>A prática da meditação é central para o Budismo. Por meio da atenção plena e da concentração, a meditação permite cultivar a mente, alcançar o insight e libertar-se das aflições.</p>
+                <img src="meditation.png" alt="Meditação">
+            </div>
+        </div>
+    </div>
+
+    <!-- Seção Contato -->
+    <div class="contactSection" id="contact">
+        <div class="container">
+            <h2>Contato</h2>
+            <form>
+                <div class="formGroup">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="formGroup">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="formGroup">
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <div class="socialMedia">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p>&copy; 2024 Portal do Budismo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts para Toggle do Tema -->
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const currentTheme = localStorage.getItem('theme') || 'light';
+
+        if (currentTheme === 'dark') {
+            document.body.classList.add('dark-theme');
+            themeToggle.checked = true;
+        }
+
+        themeToggle.addEventListener('change', () => {
+            if (themeToggle.checked) {
+                document.body.classList.add('dark-theme');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.body.classList.remove('dark-theme');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
+</body>
+</html>
